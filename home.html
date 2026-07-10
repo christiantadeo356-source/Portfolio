@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Christian Tadeo's personal portfolio - Sharing my journey through code, creativity, and personal growth.">
+    <meta name="keywords" content="Christian Tadeo, portfolio, web developer, computer science, blog">
+    <meta name="author" content="Christian Tadeo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Christian T. | Personal Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="ewaewaewae-removebg-preview.png" alt="Christian T. Logo" class="logo">
+        </div>
+        <h1>CJ's Portfolio 🤎</h1>
+        <img src="prof.webp" alt="Christian T. Profile Photo" class="profile-photo" />
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul id="navMenu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html">Blog Posts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to my Blog! 👋</h2>
+            <p>Sharing my journey through code, creativity, and personal growth.</p>
+            <a href="blog.html" class="btn">Explore My Blog</a>
+        </section>
+
+        <section class="about-preview">
+            <img src="prof.webp" alt="Christian T. Profile Photo" class="profile-photo" />
+            <div>
+                <h2>About Me</h2>
+                <p>I'm Christian, also known as CJ — a student at Holy Cross College studying Computer Science. I love playing Dota 2, listening to music, and learning to create digital things to make life easier for the future.</p>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <section class="blog-grid">
+            <h2>📌 Latest Posts</h2>
+            <div class="blog-container">
+                <article class="blog-card">
+                    <div class="card-img">
+                        <img src="rose.webp" alt="Gaming and coding hobby illustration" onerror="this.src='https://placehold.co/400x200/1e293b/22c55e?text=Hobbies'" />
+                    </div>
+                    <div class="card-body">
+                        <h3>One of My Hobbies So Far</h3>
+                        <p class="date"><i class="far fa-calendar"></i> June 22, 2025</p>
+                        <p>My hobbies consist of gaming, coding and yeah — just gaming and coding xD</p>
+                        <a href="blog.html">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="card-img">
+                        <img src="3333.webp" alt="Imaginary gaming room setup" onerror="this.src='https://placehold.co/400x200/1e293b/8b5cf6?text=Gaming+Room'" />
+                    </div>
+                    <div class="card-body">
+                        <h3>My Fav Place to Play Games</h3>
+                        <p class="date"><i class="far fa-calendar"></i> Aug 22, 2025</p>
+                        <p>Welcome to my imaginary gaming room 🤎</p>
+                        <a href="blog.html">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Let's Connect!</h2>
+            <p>Have feedback, ideas, or questions? I'd love to hear from you.</p>
+            <a href="contact.html" class="btn">Contact Me</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/christianjames.tadeo.3" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://kick.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-play"></i> Kick
+            </a>
+            <a href="https://www.instagram.com/siijy_tian/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+        <p>&copy; 2025 Christian T. | All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    </script>
+</body>
+
+</html>
